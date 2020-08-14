@@ -48,13 +48,14 @@ function titleCase(value: string): string {
     let title = '';
     let shouldUpcase = true;
     for (let i = 0; i < value.length; i++) {
+        let character = value[i]
         if (shouldUpcase) {
-            title += value[i].toUpperCase();
+            character = character.toUpperCase();
             shouldUpcase = false;
-        }
-        if (value[i] === ' ') {
+        } else if (character === ' ') {
             shouldUpcase = true;
         }
+        title += character
     }
 
     return title;
