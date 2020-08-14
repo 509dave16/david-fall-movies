@@ -1,6 +1,7 @@
+import { SafeAreaView } from 'react-native-safe-area-context';
 import {RouteProp, useRoute} from '@react-navigation/native';
 import React, {useState} from 'react';
-import {SafeAreaView, ScrollView, StatusBar} from 'react-native';
+import {ScrollView, StatusBar} from 'react-native';
 import {useValue} from 'react-native-redash';
 
 import Modal from '@components/Modal';

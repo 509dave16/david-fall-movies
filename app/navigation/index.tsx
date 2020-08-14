@@ -1,3 +1,4 @@
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
@@ -20,7 +21,7 @@ const forFade = ({current}: StackCardInterpolationProps) => ({
 });
 
 const App = () => (
-    <>
+    <SafeAreaProvider>
         <StatusBar barStyle="dark-content" />
         <NavigationContainer>
             <Stack.Navigator
@@ -33,7 +34,7 @@ const App = () => (
                 <Stack.Screen name="Start" component={Start} />
             </Stack.Navigator>
         </NavigationContainer>
-    </>
+    </SafeAreaProvider>
 );
 
 export default App;
